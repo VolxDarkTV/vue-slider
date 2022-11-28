@@ -38,9 +38,19 @@ createApp({
 },
 methods: {
   //Navigazione immagine successiva
-  nextImage(){
+    nextImage(){
       this.activeImage++
-      
+      // se siamo oltre torna alla prima
+      if(this.activeImage > this.slides[activeImage] - 1){
+          this.activeImage = 0
+      }
+    },
+
+    prevImage(){
+        this.activeImage--
+        if(this.activeImage < 0){
+            this.slides[activeImage] - 1
+        }
     }
 }
 }).mount('#app')
