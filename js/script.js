@@ -3,8 +3,9 @@ const { createApp } = Vue;
 createApp({
     data() {
       return {
+        // Indice
         activeImage : 0,
-
+        // Array di obj
         slides : 
         [
           {
@@ -45,11 +46,12 @@ methods: {
           this.activeImage = 0
       }
     },
-
+    //Navigazione immagine precedente
     prevImage(){
         this.activeImage--
+        // se siamo oltre torna all'ultima
         if(this.activeImage < 0){
-             this.activeImage = this.slides.length - 1
+            this.activeImage = this.slides.length - 1
         }
     }
 }
