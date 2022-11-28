@@ -41,7 +41,7 @@ methods: {
     nextImage(){
       this.activeImage++
       // se siamo oltre torna alla prima
-      if(this.activeImage > this.slides[activeImage] - 1){
+      if(this.activeImage > this.slides.length - 1){
           this.activeImage = 0
       }
     },
@@ -49,7 +49,7 @@ methods: {
     prevImage(){
         this.activeImage--
         if(this.activeImage < 0){
-            this.slides[activeImage] - 1
+             this.activeImage = this.slides.length - 1
         }
     }
 }
