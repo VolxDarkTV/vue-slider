@@ -34,16 +34,13 @@ createApp({
           }
         ],
           
-        methods: {
-          //Navigazione immagine successiva
-          nextImage(){
-              this.activeImage++
-              // se siamo oltre torna alla prima
-              if(this.activeImage > this.slides.lenght.image - 1){
-                  this.activeImage = 0
-              }
-          }
-        }
     }
+},
+methods: {
+  //Navigazione immagine successiva
+  nextImage(){
+      this.activeImage++
+      
     }
-  }).mount('#app')
+}
+}).mount('#app')
