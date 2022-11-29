@@ -3,7 +3,6 @@ const { createApp } = Vue;
 createApp({
     data() {
       return {
-        // Indice
         activeImage : 0,
         // Array di obj
         slides : 
