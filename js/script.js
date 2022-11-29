@@ -43,7 +43,7 @@ methods: {
       this.activeImage++
       // se siamo oltre torna alla prima
       if(this.activeImage > this.slides.length - 1){
-          this.activeImage = 0
+        this.activeImage = 0;
       }
     },
     //Navigazione immagine precedente
@@ -51,8 +51,23 @@ methods: {
         this.activeImage--
         // se siamo oltre torna all'ultima
         if(this.activeImage < 0){
-            this.activeImage = this.slides.length - 1
+            this.activeImage = this.slides.length - 1;
         }
+    },
+    // PRESS on Thumbs
+    thumbPress(index){
+        this.activeImage = index;
+    },
+    // Richiamo la funzione del nextImage per impostare l'autoplay ogni 3s
+    activeChange(){
+        setInterval(this.nextImage, 5000);
     }
+
+},
+
+// Time Switch
+mounted(){
+    this.activeChange();
+    console.log("ciao!!");
 }
 }).mount('#app')
